@@ -1,0 +1,17 @@
+setup commands:
+
+go get github.com/go-python/gopy
+
+go install github.com/go-python/gopy
+
+gopy command:
+
+env GOPATH=/Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_4/ gopy bind -output=out sum
+
+python command:
+
+env GODEBUG=cgocheck=0 python sum.py
+
+verdict:
+
+works as intended (if you're in a Python2.7 VirtualEnv- seems to be upset by Python2.7 delivered with Mac OS)

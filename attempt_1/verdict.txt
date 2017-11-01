@@ -1,0 +1,7 @@
+command:
+
+go build -o awesome.so -buildmode=c-shared awesome.go
+
+result:
+
+failed- was supposed to be generated a header file but was not

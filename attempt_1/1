@@ -1,0 +1,186 @@
+WORK=/var/folders/j1/b2w166dj3hx8fn68q1ys0r740000gn/T/go-build734785807
+runtime/internal/sys
+mkdir -p $WORK/runtime/internal/sys/_obj/
+mkdir -p $WORK/runtime/internal/
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime/internal/sys
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/runtime/internal/sys.a -trimpath $WORK -goversion go1.9 -p runtime/internal/sys -std -+ -complete -buildid fa6b2f1026711c536c37631549f658c3e7c1dda5 -D _/usr/local/Cellar/go/1.9/libexec/src/runtime/internal/sys -I $WORK -pack ./arch.go ./arch_amd64.go ./intrinsics.go ./stubs.go ./sys.go ./zgoarch_amd64.go ./zgoos_darwin.go ./zversion.go
+runtime/internal/atomic
+mkdir -p $WORK/runtime/internal/atomic/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime/internal/atomic
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/runtime/internal/atomic.a -trimpath $WORK -goversion go1.9 -p runtime/internal/atomic -std -+ -buildid 97ea81115213037c98ec0db89f9bc99b16096bb6 -D _/usr/local/Cellar/go/1.9/libexec/src/runtime/internal/atomic -I $WORK -pack -asmhdr $WORK/runtime/internal/atomic/_obj/go_asm.h ./atomic_amd64x.go ./stubs.go
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/internal/atomic/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/internal/atomic/_obj/asm_amd64.o ./asm_amd64.s
+pack r $WORK/runtime/internal/atomic.a $WORK/runtime/internal/atomic/_obj/asm_amd64.o # internal
+runtime
+mkdir -p $WORK/runtime/_obj/
+mkdir -p $WORK/
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/runtime.a -trimpath $WORK -goversion go1.9 -p runtime -std -+ -buildid 6ce12e5fb7a44567eb9fa223333fdb50886a2c2e -D _/usr/local/Cellar/go/1.9/libexec/src/runtime -I $WORK -pack -asmhdr $WORK/runtime/_obj/go_asm.h ./alg.go ./atomic_pointer.go ./cgo.go ./cgocall.go ./cgocallback.go ./cgocheck.go ./chan.go ./compiler.go ./complex.go ./cpuflags_amd64.go ./cpuprof.go ./cputicks.go ./debug.go ./defs_darwin_amd64.go ./env_posix.go ./error.go ./extern.go ./fastlog2.go ./fastlog2table.go ./float.go ./hash64.go ./hashmap.go ./hashmap_fast.go ./heapdump.go ./iface.go ./lfstack.go ./lfstack_64bit.go ./lock_sema.go ./malloc.go ./mbarrier.go ./mbitmap.go ./mcache.go ./mcentral.go ./mem_darwin.go ./mfinal.go ./mfixalloc.go ./mgc.go ./mgclarge.go ./mgcmark.go ./mgcsweep.go ./mgcsweepbuf.go ./mgcwork.go ./mheap.go ./mmap.go ./mprof.go ./msan0.go ./msize.go ./mstats.go ./netpoll.go ./netpoll_kqueue.go ./os_darwin.go ./panic.go ./plugin.go ./print.go ./proc.go ./profbuf.go ./proflabel.go ./race0.go ./rdebug.go ./relax_stub.go ./runtime.go ./runtime1.go ./runtime2.go ./rwmutex.go ./select.go ./sema.go ./signal_amd64x.go ./signal_darwin.go ./signal_darwin_amd64.go ./signal_sighandler.go ./signal_unix.go ./sigqueue.go ./sizeclasses.go ./slice.go ./softfloat64.go ./sqrt.go ./stack.go ./string.go ./stubs.go ./stubs2.go ./stubs_asm.go ./stubs_nonlinux.go ./symtab.go ./sys_nonppc64x.go ./sys_x86.go ./time.go ./timeasm.go ./trace.go ./traceback.go ./type.go ./typekind.go ./unaligned1.go ./utf8.go ./write_err.go
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/asm.o ./asm.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/asm_amd64.o ./asm_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/duff_amd64.o ./duff_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/memclr_amd64.o ./memclr_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/memmove_amd64.o ./memmove_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/rt0_darwin_amd64.o ./rt0_darwin_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/_obj/sys_darwin_amd64.o ./sys_darwin_amd64.s
+pack r $WORK/runtime.a $WORK/runtime/_obj/asm.o $WORK/runtime/_obj/asm_amd64.o $WORK/runtime/_obj/duff_amd64.o $WORK/runtime/_obj/memclr_amd64.o $WORK/runtime/_obj/memmove_amd64.o $WORK/runtime/_obj/rt0_darwin_amd64.o $WORK/runtime/_obj/sys_darwin_amd64.o # internal
+errors
+mkdir -p $WORK/errors/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/errors
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/errors.a -trimpath $WORK -goversion go1.9 -p errors -std -complete -buildid d73bbbbe6e983dec85258e4e75451685dd32eb46 -D _/usr/local/Cellar/go/1.9/libexec/src/errors -I $WORK -pack ./errors.go
+internal/race
+sync/atomic
+mkdir -p $WORK/internal/race/_obj/
+mkdir -p $WORK/internal/
+internal/cpu
+unicode/utf8
+mkdir -p $WORK/internal/cpu/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/internal/race
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/internal/race.a -trimpath $WORK -goversion go1.9 -p internal/race -std -complete -buildid f50d9661c135eeb294fecff1badce024733bfd19 -D _/usr/local/Cellar/go/1.9/libexec/src/internal/race -I $WORK -pack ./doc.go ./norace.go
+unicode
+mkdir -p $WORK/sync/atomic/_obj/
+mkdir -p $WORK/unicode/utf8/_obj/
+mkdir -p $WORK/unicode/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/internal/cpu
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/internal/cpu.a -trimpath $WORK -goversion go1.9 -p internal/cpu -std -buildid 66dfe144b34892f5cc17b1f86483e41b6389805e -D _/usr/local/Cellar/go/1.9/libexec/src/internal/cpu -I $WORK -pack -asmhdr $WORK/internal/cpu/_obj/go_asm.h ./cpu.go ./cpu_x86.go
+mkdir -p $WORK/sync/
+mkdir -p $WORK/unicode/
+cd /usr/local/Cellar/go/1.9/libexec/src/sync/atomic
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/sync/atomic.a -trimpath $WORK -goversion go1.9 -p sync/atomic -std -buildid 4e94895984275fe17fec2db0231d320f6ce50e9b -D _/usr/local/Cellar/go/1.9/libexec/src/sync/atomic -I $WORK -pack -asmhdr $WORK/sync/atomic/_obj/go_asm.h ./doc.go ./value.go
+cd /usr/local/Cellar/go/1.9/libexec/src/unicode
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/unicode.a -trimpath $WORK -goversion go1.9 -p unicode -std -complete -buildid b195e66464ddcf687f975d4cb85399d43d81bdd8 -D _/usr/local/Cellar/go/1.9/libexec/src/unicode -I $WORK -pack ./casetables.go ./digit.go ./graphic.go ./letter.go ./tables.go
+cd /usr/local/Cellar/go/1.9/libexec/src/unicode/utf8
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/unicode/utf8.a -trimpath $WORK -goversion go1.9 -p unicode/utf8 -std -complete -buildid fbfc35533fc00707be12e1174e2233eea695fa95 -D _/usr/local/Cellar/go/1.9/libexec/src/unicode/utf8 -I $WORK -pack ./utf8.go
+cd /usr/local/Cellar/go/1.9/libexec/src/internal/cpu
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/internal/cpu/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/internal/cpu/_obj/cpu_x86.o ./cpu_x86.s
+cd /usr/local/Cellar/go/1.9/libexec/src/sync/atomic
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/sync/atomic/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/sync/atomic/_obj/asm_amd64.o ./asm_amd64.s
+cd /usr/local/Cellar/go/1.9/libexec/src/internal/cpu
+pack r $WORK/internal/cpu.a $WORK/internal/cpu/_obj/cpu_x86.o # internal
+math
+mkdir -p $WORK/math/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/math
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/math.a -trimpath $WORK -goversion go1.9 -p math -std -buildid 1c3ac4d035c9b693fa451f009d8df3c31db26004 -D _/usr/local/Cellar/go/1.9/libexec/src/math -I $WORK -pack -asmhdr $WORK/math/_obj/go_asm.h ./abs.go ./acosh.go ./asin.go ./asinh.go ./atan.go ./atan2.go ./atanh.go ./bits.go ./cbrt.go ./const.go ./copysign.go ./dim.go ./erf.go ./exp.go ./expm1.go ./floor.go ./floor_asm.go ./frexp.go ./gamma.go ./hypot.go ./j0.go ./j1.go ./jn.go ./ldexp.go ./lgamma.go ./log.go ./log10.go ./log1p.go ./logb.go ./mod.go ./modf.go ./nextafter.go ./pow.go ./pow10.go ./remainder.go ./signbit.go ./sin.go ./sincos.go ./sinh.go ./sqrt.go ./tan.go ./tanh.go ./unsafe.go
+cd /usr/local/Cellar/go/1.9/libexec/src/sync/atomic
+pack r $WORK/sync/atomic.a $WORK/sync/atomic/_obj/asm_amd64.o # internal
+sync
+mkdir -p $WORK/sync/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/sync
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/sync.a -trimpath $WORK -goversion go1.9 -p sync -std -buildid 0ee92870b9f318dfe5e091147588e187b6f8d8cc -D _/usr/local/Cellar/go/1.9/libexec/src/sync -I $WORK -pack ./cond.go ./map.go ./mutex.go ./once.go ./pool.go ./runtime.go ./rwmutex.go ./waitgroup.go
+io
+mkdir -p $WORK/io/_obj/
+syscall
+mkdir -p $WORK/syscall/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/io
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/io.a -trimpath $WORK -goversion go1.9 -p io -std -complete -buildid 94bb1f6ddcfbf7230b3333384aa04568a42dd3b2 -D _/usr/local/Cellar/go/1.9/libexec/src/io -I $WORK -pack ./io.go ./multi.go ./pipe.go
+cd /usr/local/Cellar/go/1.9/libexec/src/syscall
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/syscall.a -trimpath $WORK -goversion go1.9 -p syscall -std -buildid 2710f13216c881aad4ec861273bdb0fac47e51e5 -D _/usr/local/Cellar/go/1.9/libexec/src/syscall -I $WORK -pack -asmhdr $WORK/syscall/_obj/go_asm.h ./bpf_bsd.go ./dirent.go ./endian_little.go ./env_unix.go ./exec_bsd.go ./exec_unix.go ./flock.go ./forkpipe_bsd.go ./msan0.go ./net.go ./route_bsd.go ./route_darwin.go ./sockcmsg_unix.go ./str.go ./syscall.go ./syscall_bsd.go ./syscall_darwin.go ./syscall_darwin_amd64.go ./syscall_unix.go ./timestruct.go ./zerrors_darwin_amd64.go ./zsyscall_darwin_amd64.go ./zsysnum_darwin_amd64.go ./ztypes_darwin_amd64.go
+cd /usr/local/Cellar/go/1.9/libexec/src/math
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/asin_amd64.o ./asin_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/asinh_stub.o ./asinh_stub.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/atan2_amd64.o ./atan2_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/atan_amd64.o ./atan_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/cbrt_stub.o ./cbrt_stub.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/dim_amd64.o ./dim_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/erf_stub.o ./erf_stub.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/exp2_amd64.o ./exp2_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/exp_amd64.o ./exp_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/expm1_amd64.o ./expm1_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/floor_amd64.o ./floor_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/frexp_amd64.o ./frexp_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/hypot_amd64.o ./hypot_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/ldexp_amd64.o ./ldexp_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/log10_amd64.o ./log10_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/log1p_amd64.o ./log1p_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/log_amd64.o ./log_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/mod_amd64.o ./mod_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/modf_amd64.o ./modf_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/pow_stub.o ./pow_stub.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/remainder_amd64.o ./remainder_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/sin_amd64.o ./sin_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/sinh_stub.o ./sinh_stub.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/sqrt_amd64.o ./sqrt_amd64.s
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/math/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/math/_obj/tan_amd64.o ./tan_amd64.s
+pack r $WORK/math.a $WORK/math/_obj/asin_amd64.o $WORK/math/_obj/asinh_stub.o $WORK/math/_obj/atan2_amd64.o $WORK/math/_obj/atan_amd64.o $WORK/math/_obj/cbrt_stub.o $WORK/math/_obj/dim_amd64.o $WORK/math/_obj/erf_stub.o $WORK/math/_obj/exp2_amd64.o $WORK/math/_obj/exp_amd64.o $WORK/math/_obj/expm1_amd64.o $WORK/math/_obj/floor_amd64.o $WORK/math/_obj/frexp_amd64.o $WORK/math/_obj/hypot_amd64.o $WORK/math/_obj/ldexp_amd64.o $WORK/math/_obj/log10_amd64.o $WORK/math/_obj/log1p_amd64.o $WORK/math/_obj/log_amd64.o $WORK/math/_obj/mod_amd64.o $WORK/math/_obj/modf_amd64.o $WORK/math/_obj/pow_stub.o $WORK/math/_obj/remainder_amd64.o $WORK/math/_obj/sin_amd64.o $WORK/math/_obj/sinh_stub.o $WORK/math/_obj/sqrt_amd64.o $WORK/math/_obj/tan_amd64.o # internal
+strconv
+mkdir -p $WORK/strconv/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/strconv
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/strconv.a -trimpath $WORK -goversion go1.9 -p strconv -std -complete -buildid 0cd92fcabc192fae81b38bf581f5dd38ba2500e0 -D _/usr/local/Cellar/go/1.9/libexec/src/strconv -I $WORK -pack ./atob.go ./atof.go ./atoi.go ./decimal.go ./doc.go ./extfloat.go ./ftoa.go ./isprint.go ./itoa.go ./quote.go
+cd /usr/local/Cellar/go/1.9/libexec/src/syscall
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/syscall/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/syscall/_obj/asm_darwin_amd64.o ./asm_darwin_amd64.s
+pack r $WORK/syscall.a $WORK/syscall/_obj/asm_darwin_amd64.o # internal
+time
+mkdir -p $WORK/time/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/time
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/time.a -trimpath $WORK -goversion go1.9 -p time -std -buildid c14521607c3a867e0b351d52739d550f572bee3a -D _/usr/local/Cellar/go/1.9/libexec/src/time -I $WORK -pack ./format.go ./sleep.go ./sys_unix.go ./tick.go ./time.go ./zoneinfo.go ./zoneinfo_read.go ./zoneinfo_unix.go
+reflect
+mkdir -p $WORK/reflect/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/reflect
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/reflect.a -trimpath $WORK -goversion go1.9 -p reflect -std -buildid 3c5a1332940dde7b123f21ad222de94f50a60cf4 -D _/usr/local/Cellar/go/1.9/libexec/src/reflect -I $WORK -pack -asmhdr $WORK/reflect/_obj/go_asm.h ./deepequal.go ./makefunc.go ./swapper.go ./type.go ./value.go
+internal/poll
+mkdir -p $WORK/internal/poll/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/internal/poll
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/internal/poll.a -trimpath $WORK -goversion go1.9 -p internal/poll -std -buildid 65e4b441f06d56a304ef0cbac7460a63916f2acb -D _/usr/local/Cellar/go/1.9/libexec/src/internal/poll -I $WORK -pack ./fd.go ./fd_mutex.go ./fd_poll_runtime.go ./fd_posix.go ./fd_unix.go ./hook_unix.go ./sockopt.go ./sockopt_unix.go ./sockoptip.go ./sys_cloexec.go ./writev.go
+os
+mkdir -p $WORK/os/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/os
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/os.a -trimpath $WORK -goversion go1.9 -p os -std -buildid 5bc179ef995d4b4524df1e02a72803e26357f30a -D _/usr/local/Cellar/go/1.9/libexec/src/os -I $WORK -pack ./dir.go ./dir_unix.go ./env.go ./error.go ./error_posix.go ./error_unix.go ./exec.go ./exec_posix.go ./exec_unix.go ./executable.go ./executable_darwin.go ./file.go ./file_posix.go ./file_unix.go ./getwd.go ./getwd_darwin.go ./path.go ./path_unix.go ./pipe_bsd.go ./proc.go ./stat_darwin.go ./stat_unix.go ./sticky_bsd.go ./str.go ./sys.go ./sys_bsd.go ./sys_darwin.go ./types.go ./types_unix.go ./wait_unimp.go
+cd /usr/local/Cellar/go/1.9/libexec/src/reflect
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/reflect/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/reflect/_obj/asm_amd64.o ./asm_amd64.s
+pack r $WORK/reflect.a $WORK/reflect/_obj/asm_amd64.o # internal
+fmt
+sort
+mkdir -p $WORK/fmt/_obj/
+mkdir -p $WORK/sort/_obj/
+cd /usr/local/Cellar/go/1.9/libexec/src/fmt
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/fmt.a -trimpath $WORK -goversion go1.9 -p fmt -std -complete -buildid c4a4dc5815f8d5db23d30f074b8bf76e2cbe2083 -D _/usr/local/Cellar/go/1.9/libexec/src/fmt -I $WORK -pack ./doc.go ./format.go ./print.go ./scan.go
+cd /usr/local/Cellar/go/1.9/libexec/src/sort
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/sort.a -trimpath $WORK -goversion go1.9 -p sort -std -complete -buildid 6f033c581927928a3ec4b4fbb528d73a058885f4 -D _/usr/local/Cellar/go/1.9/libexec/src/sort -I $WORK -pack ./search.go ./sort.go ./zfuncversion.go
+runtime/cgo
+mkdir -p $WORK/runtime/cgo/_obj/
+mkdir -p $WORK/runtime/
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo
+CGO_LDFLAGS="-g" "-O2" "-lpthread" /usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/cgo -objdir $WORK/runtime/cgo/_obj/ -importpath runtime/cgo -import_runtime_cgo=false -import_syscall=false -exportheader=$WORK/runtime/cgo/_obj/_cgo_install.h -- -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror cgo.go
+cd $WORK
+clang -fdebug-prefix-map=a=b -c trivial.c
+clang -gno-record-gcc-switches -c trivial.c
+cd $WORK/runtime/cgo/_obj
+clang -I /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I ./ -g -O2 -Wall -Werror -o ./_cgo_export.o -c _cgo_export.c
+clang -I /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I ./ -g -O2 -Wall -Werror -o ./cgo.cgo2.o -c cgo.cgo2.c
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror -o $WORK/runtime/cgo/_obj/gcc_context.o -c gcc_context.c
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror -o $WORK/runtime/cgo/_obj/gcc_darwin_amd64.o -c gcc_darwin_amd64.c
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror -o $WORK/runtime/cgo/_obj/gcc_libinit.o -c gcc_libinit.c
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror -o $WORK/runtime/cgo/_obj/gcc_setenv.o -c gcc_setenv.c
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror -o $WORK/runtime/cgo/_obj/gcc_util.o -c gcc_util.c
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I $WORK/runtime/cgo/_obj/ -g -O2 -Wall -Werror -o $WORK/runtime/cgo/_obj/gcc_amd64.o -c gcc_amd64.S
+cd $WORK/runtime/cgo/_obj
+clang -I /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I ./ -g -O2 -Wall -Werror -o ./_cgo_main.o -c _cgo_main.c
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -o $WORK/runtime/cgo/_obj/_cgo_.o $WORK/runtime/cgo/_obj/_cgo_main.o $WORK/runtime/cgo/_obj/_cgo_export.o $WORK/runtime/cgo/_obj/cgo.cgo2.o $WORK/runtime/cgo/_obj/gcc_context.o $WORK/runtime/cgo/_obj/gcc_darwin_amd64.o $WORK/runtime/cgo/_obj/gcc_libinit.o $WORK/runtime/cgo/_obj/gcc_setenv.o $WORK/runtime/cgo/_obj/gcc_util.o $WORK/runtime/cgo/_obj/gcc_amd64.o -g -O2 -lpthread
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/cgo -dynpackage cgo -dynimport $WORK/runtime/cgo/_obj/_cgo_.o -dynout $WORK/runtime/cgo/_obj/_cgo_import.go -dynlinker
+cd $WORK
+clang -no-pie -c trivial.c
+clang -nopie -c trivial.c
+cd /usr/local/Cellar/go/1.9/libexec/src/runtime/cgo
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -o $WORK/runtime/cgo/_obj/_all.o $WORK/runtime/cgo/_obj/_cgo_export.o $WORK/runtime/cgo/_obj/cgo.cgo2.o $WORK/runtime/cgo/_obj/gcc_context.o $WORK/runtime/cgo/_obj/gcc_darwin_amd64.o $WORK/runtime/cgo/_obj/gcc_libinit.o $WORK/runtime/cgo/_obj/gcc_setenv.o $WORK/runtime/cgo/_obj/gcc_util.o $WORK/runtime/cgo/_obj/gcc_amd64.o -g -O2 -Wl,-r -nostdlib -nopie
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/runtime/cgo.a -trimpath $WORK -goversion go1.9 -p runtime/cgo -std -buildid c8cbbbd2be9036c927a0f4fddd1d5261c4b94470 -D _/usr/local/Cellar/go/1.9/libexec/src/runtime/cgo -I $WORK -pack -asmhdr $WORK/runtime/cgo/_obj/go_asm.h ./callbacks.go ./iscgo.go ./setenv.go $WORK/runtime/cgo/_obj/_cgo_gotypes.go $WORK/runtime/cgo/_obj/cgo.cgo1.go $WORK/runtime/cgo/_obj/_cgo_import.go
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/asm -trimpath $WORK -I $WORK/runtime/cgo/_obj/ -I /usr/local/Cellar/go/1.9/libexec/pkg/include -D GOOS_darwin -D GOARCH_amd64 -o $WORK/runtime/cgo/_obj/asm_amd64.o ./asm_amd64.s
+pack r $WORK/runtime/cgo.a $WORK/runtime/cgo/_obj/asm_amd64.o $WORK/runtime/cgo/_obj/_all.o # internal
+command-line-arguments
+mkdir -p $WORK/command-line-arguments/_obj/
+mkdir -p $WORK/command-line-arguments/_obj/exe/
+cd /Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_1
+CGO_LDFLAGS="-g" "-O2" /usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/cgo -objdir $WORK/command-line-arguments/_obj/ -importpath command-line-arguments -exportheader=$WORK/command-line-arguments/_obj/_cgo_install.h -- -I $WORK/command-line-arguments/_obj/ -g -O2 awesome.go
+cd $WORK/command-line-arguments/_obj
+clang -I /Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_1 -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I ./ -g -O2 -o ./_cgo_export.o -c _cgo_export.c
+clang -I /Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_1 -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I ./ -g -O2 -o ./awesome.cgo2.o -c awesome.cgo2.c
+clang -I /Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_1 -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -I ./ -g -O2 -o ./_cgo_main.o -c _cgo_main.c
+cd /Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_1
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -o $WORK/command-line-arguments/_obj/_cgo_.o $WORK/command-line-arguments/_obj/_cgo_main.o $WORK/command-line-arguments/_obj/_cgo_export.o $WORK/command-line-arguments/_obj/awesome.cgo2.o -g -O2
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/cgo -dynpackage main -dynimport $WORK/command-line-arguments/_obj/_cgo_.o -dynout $WORK/command-line-arguments/_obj/_cgo_import.go
+clang -I . -fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=$WORK=/tmp/go-build -gno-record-gcc-switches -fno-common -o $WORK/command-line-arguments/_obj/_all.o $WORK/command-line-arguments/_obj/_cgo_export.o $WORK/command-line-arguments/_obj/awesome.cgo2.o -g -O2 -Wl,-r -nostdlib -nopie
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/compile -o $WORK/command-line-arguments.a -trimpath $WORK -goversion go1.9 -p main -buildid 7a0c8ce6f2852db6114657e1af303a9747c1d52f -D _/Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_1 -I $WORK -pack $WORK/command-line-arguments/_obj/_cgo_gotypes.go $WORK/command-line-arguments/_obj/awesome.cgo1.go $WORK/command-line-arguments/_obj/_cgo_import.go
+pack r $WORK/command-line-arguments.a $WORK/command-line-arguments/_obj/_all.o # internal
+cd $WORK/command-line-arguments/_obj/exe/
+/usr/local/Cellar/go/1.9/libexec/pkg/tool/darwin_amd64/link -o awesome.so -L $WORK -extld=clang -buildmode=c-shared -buildid=7a0c8ce6f2852db6114657e1af303a9747c1d52f $WORK/command-line-arguments.a
+mv $WORK/command-line-arguments/_obj/exe/awesome.so awesome.so
