@@ -1,16 +1,16 @@
 setup commands:
 
-go get github.com/go-python/gopy
+env GOPATH=`pwd` go get github.com/go-python/gopy
 
-go install github.com/go-python/gopy
+env GOPATH=`pwd` go install github.com/go-python/gopy
 
 gopy command:
 
-env GOPATH=/Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_4/ gopy bind -output=out sum
+env GOPATH=`pwd` gopy bind -output=out sum
 
 python command:
 
-env GODEBUG=cgocheck=0 python sum.py
+env GOPATH=`pwd` GODEBUG=cgocheck=0 PYTHONPATH=`pwd`/src/github.com/go-python python sum.py
 
 verdict:
 
