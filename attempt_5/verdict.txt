@@ -1,9 +1,0 @@
-setup commands:
-
-go get github.com/go-python/gopy
-
-go install github.com/go-python/gopy
-
-python command:
-
-env PYTHONPATH=/Users/edwardbeech/go/src/github.com/go-python/gopy/ GOPATH=/Users/edwardbeech/Projects/Home/golang_python_binding_research/attempt_5/ GODEBUG=cgocheck=0 python sum.py
