@@ -41,7 +41,7 @@ go get github.com/go-python/gopy
 echo ""
 
 if [[ $GOVERSION == *"go1.10"* ]]; then
-    echo "fix errant pkg-config call in gopy (because we're running Go1.10)"
+    echo "fixing errant pkg-config call in gopy (because we're running Go1.10)"
     sed 's^//#cgo pkg-config: %\[2\]s --cflags --libs^//#cgo pkg-config: %\[2\]s^g' src/github.com/go-python/gopy/bind/gengo.go > temp.go
     mv temp.go src/github.com/go-python/gopy/bind/gengo.go
 fi
@@ -65,3 +65,21 @@ echo ""
 echo "build $PACKAGE bindings for cffi"
 ./gopy bind -lang="cffi" -output="src/$PACKAGE/cffi" -symbols=true -work=false $PACKAGE
 echo ""
+
+TEMP_FILE=$(mktemp)
+echo "fixing broken cffi output (this is yuck)"
+
+sed 's/\[\]str):/list):/g' src/$PACKAGE/cffi/$PACKAGE.py > $TEMP_FILE
+mv $TEMP_FILE src/$PACKAGE/cffi/$PACKAGE.py
+
+sed 's/\[\]int):/list):/g' src/$PACKAGE/cffi/$PACKAGE.py > $TEMP_FILE
+mv $TEMP_FILE src/$PACKAGE/cffi/$PACKAGE.py
+
+sed 's/\[\]long):/list):/g' src/$PACKAGE/cffi/$PACKAGE.py > $TEMP_FILE
+mv $TEMP_FILE src/$PACKAGE/cffi/$PACKAGE.py
+
+sed 's/\[\]float):/list):/g' src/$PACKAGE/cffi/$PACKAGE.py > $TEMP_FILE
+mv $TEMP_FILE src/$PACKAGE/cffi/$PACKAGE.py
+
+sed 's/\[\]bool):/list):/g' src/$PACKAGE/cffi/$PACKAGE.py > $TEMP_FILE
+mv $TEMP_FILE src/$PACKAGE/cffi/$PACKAGE.py
