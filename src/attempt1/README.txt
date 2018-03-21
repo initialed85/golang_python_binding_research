@@ -1,0 +1,1 @@
+This attempt is for testing a struct from Go to Python
