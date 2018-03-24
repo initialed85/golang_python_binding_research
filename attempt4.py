@@ -6,5 +6,5 @@ from src.attempt4 import DoSomething
 print 'Doing something in a process'
 p = Process(target=DoSomething)
 p.start()
-time.sleep(2)
+time.sleep(1.1)
 p.join()
